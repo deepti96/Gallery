@@ -1,0 +1,59 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>SlideShow JQuery</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+</script>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body onLoad="setName()">
+<div id="container">
+<div id="wrapper">
+	<ul id="slideShow">
+	<li><img src="images/1.jpg" alt="image1"></li>
+	<li><img src="images/2.jpg" alt="image1"></li>
+	<li><img src="images/3.jpg" alt="image1"></li>
+	<li><img src="images/4.jpg" alt="image1"></li>
+	<li><img src="images/5.jpg" alt="image1"></li>
+	<li><img src="images/6.jpg" alt="image1"></li>
+	<li><img src="images/7.jpg" alt="image1"></li>
+	<li><img src="images/8.jpg" alt="image1"></li>
+    </ul>
+    <button id="pre" style="left:0px;" onclick="setCurImg(--cur)">
+    &#8676
+    </button>
+    <button id="next" style="right:0px;" onclick="setCurImg(++cur)">
+    &#8677
+    </button>
+</div>
+</div>
+<div id="name">
+	Slider GALLERY
+</div>
+<script>
+	var slideshow = document.getElementById('slideShow');
+	var imgWidth = 800;
+	
+	slideshow.style.width = 8*imgWidth+"px";
+	var cur =0;
+function setCurImg(pos){
+	if(cur<0){
+		cur = 7;
+	}else if(cur>7){
+
+		cur = 0;
+	}
+            var posx = imgWidth*cur;
+			$('#slideShow').animate({
+				right:posx}
+				,100);
+        }
+function setName(){
+	$('#name').animate({left:screen.width/2-$('#name').width()/2},1000);
+	}
+</script>
+</body>
+</html>

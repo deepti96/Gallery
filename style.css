@@ -1,0 +1,53 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+body{
+	background:black;
+	}
+	
+#wrapper{
+	position:relative;
+	width:800px;
+	height:500px;
+	margin:auto;
+	overflow:hidden;
+}
+#slideShow{
+	position:relative;
+	width:800px;
+}
+	#slideShow li{
+		display:inline;
+		float:left;
+		width:800px;
+		height:500px;
+	}
+	#slideShow img{
+		width:800px;
+		height:500px;
+	}
+	#container{
+		position:relative;
+		
+	background:url('images/backform.jpg');
+		z-index:3;
+	}
+	#wrapper button{
+		background:rgba(0,0,0,0.73);
+		z-index:2;
+		color:#ffffff;
+		font-size:18px;
+		position:absolute;
+		bottom:0px;
+		border:none;
+		padding:10px;
+		width:300px;
+	}
+	#name{
+		position:relative;
+		display:inline;
+		color:#fff;
+		margin-top:20px;
+		font-size:32px;
+		}
